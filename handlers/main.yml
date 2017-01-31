@@ -1,2 +1,4 @@
 ---
 # handlers file for docker
+- name: start 
+  systemd: name=docker state=started

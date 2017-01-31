@@ -1,0 +1,11 @@
+---
+- name: Installing docker-engineeeeee
+  raw: yum-config-manager --add-repo  https://docs.docker.com/engine/installation/linux/repo_files/centos/docker.repo 
+ 
+- name: Updating the repository
+  yum : name=* state=latest 
+
+- name: Installing the docker-engine
+  yum: name=docker-engine state=present
+  notify: 
+    - start 
