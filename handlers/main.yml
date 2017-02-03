@@ -1,4 +1,5 @@
 ---
-# handlers file for docker
-- name: start 
-  systemd: name=docker state=started
+# roles/ansible-docker-role/handlers/main.yml
+- name: starting ............................................................. 
+  command: service docker start
+  sudo: yes 
